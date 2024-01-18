@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+body {
+  overflow-y: auto;
+  font-family: 'Abril Fatface', serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin-top: 13.5rem;
+  color: #999;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+body::before {
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#input {
+  outline: 2px solid black;
+}
+
+#input:focus-visible {
+  outline: 2px double black;
+}
+
+.searchDiv {
+  text-align: center;
+}
+
+.searchDiv p {
+  font-family: 'Poppins';
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.forecastDiv {
+  margin-top: 5%;
+}
+
+.forecast {
+  margin: 4rem auto;
+  border-radius: 10px;
+  background-color: #8b8b8b38;
+}
+
+.fa-search {
+  font-size: 1.5rem;
+  color: black;
+  padding-left: 15px;
+}
+
+.fa-search:hover {
+  animation-duration: 1s;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.info {
+  list-style: none;
+  color: white;
+  font-size: 27px;
+}
+
+.weatherHeading {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3em;
+}
+
+.active {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.icon {
+  transform: scale(1.3);
+}
